@@ -44,6 +44,14 @@ impl Default for Person {
 
 impl From<&str> for Person {
     fn from(s: &str) -> Person {
+        let str_vec:Vec<&str> =s.split(',').collect();
+        // check str whether correct
+        if str_vec.len() != 2 {
+            return Person::default();
+        }
+        
+
+        Person::default()
     }
 }
 
