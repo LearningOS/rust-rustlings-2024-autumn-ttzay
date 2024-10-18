@@ -69,7 +69,10 @@ impl<T> LinkedList<T> {
             },
         }
     }
-	pub fn merge(list_a:LinkedList<T>,list_b:LinkedList<T>) -> Self
+}
+
+impl<T:PartialOrd> LinkedList<T:PartialOrd> {
+    pub fn merge<T:PartialOrd>(list_a:LinkedList<T>,list_b:LinkedList<T>) -> Self
 	{
 		//TODO
 		Self {
@@ -77,6 +80,7 @@ impl<T> LinkedList<T> {
             start: None,
             end: None,
         }
+        
 	}
 }
 
